@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# This script acts as an installer
 #Author: Antonio Gutierrez
 
 dir=$(pwd)
