@@ -22,6 +22,7 @@ cd solarized_gnome/
 
 `[COUNTRY]` and `[CITY]` are optional parameters.
 Default parameters of script is: Germany Kaiserslautern
+
 **NOTE**: If you're using a different location than the default one (and you probably are), give all TWO parameters as they are needed because of disambiguity of location and simplicity of script.
 
 
