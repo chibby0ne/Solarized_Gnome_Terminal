@@ -4,7 +4,7 @@
 # getting time and setting dark or light theme
 solarized_files_dir=
 sunrise=10#08
-sunset=16
+sunset=10#16
 time=$(date +%k)
 
 

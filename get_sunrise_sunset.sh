@@ -32,7 +32,7 @@ if [[ rc -eq 0 ]]; then
 
     #update bashrc with today's values
     sed -i "s/sunrise=.*/sunrise=10#${times[1]}/g" ~/.bashrc
-    sed -i "s/sunset=.*/sunset=${times[2]}/g" ~/.bashrc
+    sed -i "s/sunset=.*/sunset=10#${times[2]}/g" ~/.bashrc
 
     #update vimrc with today's values
     sed -i "s/let sunrise=.*/let sunrise=${times[1]}/g" ~/.vimrc
