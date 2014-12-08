@@ -15,8 +15,8 @@ Pretty cool huh? :)
 ## Installation
 
 ``` bash
-git clone https://www.github.com/chibby0ne/solarized_gnome
-cd solarized_gnome/
+git clone https://www.github.com/chibby0ne/Solarized_Gnome_Terminal
+cd Solarized_Gnome_Terminal/
 ./install.sh [COUNTRY] [CITY]
 ```
 
