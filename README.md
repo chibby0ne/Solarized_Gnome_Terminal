@@ -23,7 +23,7 @@ cd Solarized_Gnome_Terminal/
 `[COUNTRY]` and `[CITY]` are optional parameters.
 Default parameters of script is: Germany Kaiserslautern.
 
-**NOTE**: If you're using a different location than the default one (and you probably are), give all TWO parameters as they are needed disambiguate location and simplicity of script.
+**NOTE**: If you're using a different location than the default one (and you probably are), give all TWO parameters as they are needed to disambiguate location and simplicity of script.
 
 
 ## Usage 
