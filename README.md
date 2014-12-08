@@ -21,7 +21,7 @@ cd solarized_gnome/
 ```
 
 `[COUNTRY]` and `[CITY]` are optional parameters.
-Default parameters of script is: Germany Kaiserslautern
+Default parameters of script is: Germany Kaiserslautern.
 
 **NOTE**: If you're using a different location than the default one (and you probably are), give all TWO parameters as they are needed disambiguate location and simplicity of script.
 
@@ -29,6 +29,7 @@ Default parameters of script is: Germany Kaiserslautern
 ## Usage 
 
 It's all taken care for in the background by crontab and the script `get_sunrise_sunset.sh`. Isn't that awesome? 
+
 The background colors theme as well as the color shown by the shell command `ls` only changes when opening a new terminal or opening a new terminal, after the passing the sunset(to dark) or sunrise(to light) time.
 
 ## Future improvements
