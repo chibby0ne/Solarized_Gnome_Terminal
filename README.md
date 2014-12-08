@@ -7,7 +7,7 @@ Pretty cool huh? :)
 
 ## Requirements 
 
-* [git... You don't have it already?](http://git-scm.com/downloads)
+* [git... Don't you have it already?](http://git-scm.com/downloads)
 * [wget](https://www.gnu.org/software/wget/)
 * Bash
 * dconf-cli
@@ -33,10 +33,10 @@ The background colors theme as well as the color shown by the shell command `ls`
 
 ## Future improvements
 
-[] Work with submodules so that the downloaded repos can be updated when this one is updated
-[] Use minutes for more precision (not sure how relevant as the switch is not necessarily made immediately after sunset but when opening or sourcing .bashrc)
-[] Include vimrc code, as there's vimrc sunrise/sunset time update
-[] Installation script should check if the .rc files already have the code added to them so that the code is not added appended more than once
+- [ ] Work with submodules so that the downloaded repos can be updated when this one is updated
+- [ ] Use minutes for more precision (not sure how relevant as the switch is not necessarily made immediately after sunset but when opening or sourcing .bashrc)
+- [ ] Include vimrc code, as there's vimrc sunrise/sunset time update
+- [ ] Installation script should check if the .rc files already have the code added to them so that the code is not added appended more than once
 
 ## License
 
