@@ -47,7 +47,7 @@ This project is licensed under the [GNU GPLv2](LICENSE)
 
 ## Copyright 
 
-Copyright (c) 2014 Antonio Gutierrez
+Copyright © 2014 Antonio Gutierrez
 
 ## Thanks
 
