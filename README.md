@@ -17,6 +17,8 @@ Pretty cool huh? :)
 ``` bash
 git clone https://www.github.com/chibby0ne/Solarized_Gnome_Terminal
 cd Solarized_Gnome_Terminal/
+git submodule init
+git submodule update
 ./install.sh [COUNTRY] [CITY]
 ```
 
