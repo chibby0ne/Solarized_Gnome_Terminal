@@ -39,7 +39,7 @@ The background colors theme as well as the color shown by the shell command `ls`
 - [X] Work with submodules so that the downloaded repos can be updated when this one is updated
 - [ ] Use minutes for more precision (not sure how relevant as the switch is not necessarily made immediately after sunset but when opening or sourcing .bashrc)
 - [ ] Include vimrc code, as there's vimrc sunrise/sunset time update
-- [ ] Installation script should check if the .rc files already have the code added to them so that the code is not added appended more than once
+- [X] Installation script should check if the .rc files already have the code added to them so that the code is not added appended more than once
 
 ## License
 
