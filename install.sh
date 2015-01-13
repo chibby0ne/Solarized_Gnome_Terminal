@@ -20,13 +20,13 @@ fi
 echo "Installating..."
 
 ### Get Repos ####
-echo "Downloading Repos"
+# echo "Downloading additional Repos"
 
-# Solarized for Gnome Terminal 
-git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git &> /dev/null
+# # Solarized for Gnome Terminal 
+# git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git &> /dev/null
 
-# Color ls 
-git clone https://github.com/seebi/dircolors-solarized.git &> /dev/null
+# # Color ls 
+# git clone https://github.com/seebi/dircolors-solarized.git &> /dev/null
 
 ### Add crontab entry ###
 echo "Adding crontab entry"
