@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Solarized gnome terminal : A script that installs the Solarized theme for Gnome Terminal and changes between dark and light mode depending on the sunrise and sunset time for the given location">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Solarized gnome terminal</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/chibby0ne/Solarized_Gnome_Terminal">View on GitHub</a>
+
+          <h1 id="project_title">Solarized gnome terminal</h1>
+          <h2 id="project_tagline">A script that installs the Solarized theme for Gnome Terminal and changes between dark and light mode depending on the sunrise and sunset time for the given location</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/chibby0ne/Solarized_Gnome_Terminal/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/chibby0ne/Solarized_Gnome_Terminal/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="solarized-for-gnome-complete-installation-script" class="anchor" href="#solarized-for-gnome-complete-installation-script" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solarized for Gnome complete installation script</h1>
+
+<p>A simple script that downloads all the repositories needed to install and correctly utilize the famous and excellent solarized theme for the Gnome Terminal, and sets up a cron job to automatically change between dark and light version of the solarized colorscheme depending on when the sunrise and sunset is on your indicated location and the time of the year.</p>
+
+<p>Pretty cool huh? :) </p>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li><a href="http://git-scm.com/downloads">git... Don't you have it already?</a></li>
+<li><a href="https://www.gnu.org/software/wget/">wget</a></li>
+<li>Bash</li>
+<li>dconf-cli</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<div class="highlight highlight-bash"><pre>git clone https://www.github.com/chibby0ne/Solarized_Gnome_Terminal
+<span class="pl-s3">cd</span> Solarized_Gnome_Terminal/
+git submodule init
+git submodule update
+./install.sh [COUNTRY] [CITY]</pre></div>
+
+<p><code>[COUNTRY]</code> and <code>[CITY]</code> are optional parameters.
+Default parameters of script is: Germany Kaiserslautern.</p>
+
+<p><strong>NOTE</strong>: If you're using a different location than the default one (and you probably are), give all TWO parameters as they are needed to disambiguate location and simplicity of script.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>It's all taken care for in the background by crontab and the script <code>get_sunrise_sunset.sh</code>. Isn't that awesome? </p>
+
+<p>The background colors theme as well as the color shown by the shell command <code>ls</code> only changes when opening a new terminal or opening a new terminal, after the passing the sunset(to dark) or sunrise(to light) time.</p>
+
+<h2>
+<a id="future-improvements" class="anchor" href="#future-improvements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Future improvements</h2>
+
+<ul>
+<li>[X] Work with submodules so that the downloaded repos can be updated when this one is updated</li>
+<li>[ ] Use minutes for more precision (not sure how relevant as the switch is not necessarily made immediately after sunset but when opening or sourcing .bashrc)</li>
+<li>[ ] Include vimrc code, as there's vimrc sunrise/sunset time update</li>
+<li>[X] Installation script should check if the .rc files already have the code added to them so that the code is not added appended more than once</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This project is licensed under the <a href="LICENSE">GNU GPLv2</a></p>
+
+<h2>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>Copyright © 2014 Antonio Gutierrez</p>
+
+<h2>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p>We stand on the shoulders of giants. 
+Thanks to <a href="https://github.com/seebi">seebi</a>, <a href="https://github.com/Anthony25">Anthony25</a> and of course <a href="https://github.com/altercation">altercation</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Solarized gnome terminal maintained by <a href="https://github.com/chibby0ne">chibby0ne</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
