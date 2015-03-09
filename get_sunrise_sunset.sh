@@ -16,27 +16,30 @@ website="http://www.timeanddate.com/astronomy/$country/$city"
 temp=$(mktemp)
 
 # get website
-rc = $(wget $website -O $temp &> /dev/null) 
+rc=$(wget $website -O $temp &> /dev/null) 
 
 # store values for sunrise/sunset
 if [[ rc -eq 0 ]]; then
-    #statements
+
+    # use an array to store times
     declare -a times
 
     # parsing magic
     for (( i = 1; i != 3; i++ )); do
-        times[$i]=$(sed "s/<span\ class=three>/&\n/g" $temp | sed "s/^\([0-9][0-9]\).*/\1/g" | sed -n "/^[0-9]/p" | sed -n ${i}p)
+        times[$i]=$(sed "s/<span\ class=three>/&\n/g" $temp | sed "s/^\([0-9]\+:[0-9]\+\).*/\1/g" | sed -n "/^[0-9]/p" | sed -n ${i}p)
     done
 
+    # don't need the webpage anymore
     rm $temp
 
     #update bashrc with today's values
-    sed -i "s/sunrise=.*/sunrise=10#${times[1]}/g" ~/.bashrc
-    sed -i "s/sunset=.*/sunset=10#${times[2]}/g" ~/.bashrc
+    sed -i "s/sunrise=.*/sunrise=10#${times[1]/:/}/g" ~/.bashrc
+    sed -i "s/sunset=.*/sunset=10#${times[2]/:/}/g" ~/.bashrc
 
     #update vimrc with today's values
-    sed -i "s/let sunrise=.*/let sunrise=${times[1]}/g" ~/.vimrc
-    sed -i "s/let sunset=.*/let sunset=${times[2]}/g" ~/.vimrc
+    sed -i "s/let sunrise=.*/let sunrise=\"${times[1]}\"/g" ~/.vimrc
+    sed -i "s/let sunset=.*/let sunset=\"${times[2]}\"/g" ~/.vimrc
+
 else
     echo "Error: exit code $rc"
 fi

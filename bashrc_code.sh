@@ -1,12 +1,12 @@
 
-## THIS CODE WAS ADDED BY SOLARIZED_GNONE script ##
+## THIS CODE WAS ADDED BY SOLARIZED_GNOME_TERMINAL script ##
 ## FOR CORRECT BEHAVIOUR DO NOT MODIFY ##
 
 # getting time and setting dark or light theme
 solarized_files_dir=
 sunrise=10#08
 sunset=10#16
-time=$(date +%k)
+time=$(date +%k%M)
 
 
 if [[ sunrise -le time && time -lt sunset ]]; then

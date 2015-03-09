@@ -32,7 +32,7 @@ else
 fi
 
 ##  Add bashrc code ##
-if [[ $(grep -q "solarized_files_dir" ~/.bashrc ; echo $?) -eq 1 ]]; then
+if [[ $(grep -q "SOLARIZED_GNOME_TERMINAL script" ~/.bashrc ; echo $?) -eq 1 ]]; then
     echo "Bashrc Code: Adding"
     cat bashrc_code.sh >> ~/.bashrc
     dir=${dir//\//\\\/}             # sustitute / to \/ in dir in order for sed to work
@@ -40,6 +40,15 @@ if [[ $(grep -q "solarized_files_dir" ~/.bashrc ; echo $?) -eq 1 ]]; then
 else
     echo "Bashrc Code: Already Added"
 fi
+
+##  Add vimrc code ##
+if [[ $(grep -q "SOLARIZED_GNOME_TERMINAL script" ~/.vimrc ; echo $?) -eq 1 ]]; then
+    echo "Vimrc Code: Adding"
+    cat vimrc_code.txt >> ~/.vimrc
+else
+    echo "Vimrc Code: Already Added"
+fi
+
 
 ### Installation ended ###
 echo "Installation Finished"

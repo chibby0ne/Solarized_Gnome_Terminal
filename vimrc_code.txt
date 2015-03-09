@@ -1,0 +1,14 @@
+
+"" THIS CODE WAS ADDED BY SOLARIZED_GNOME_TERMINAL script ""
+"" FOR CORRECT BEHAVIOUR DO NOT MODIFY ""
+
+" getting time and setting dark or light theme
+let sunrise="06:56"
+let sunset="18:24"
+
+let hour=strftime("%H:%M")
+if sunrise <= hour && hour < sunset
+    set background=light
+else
+    set background=dark
+endif
