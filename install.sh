@@ -19,6 +19,12 @@ fi
 ### Beginning Instalation ###
 echo "Installating..."
 
+### Get Repos ###
+echo "Downloading Repos"
+git submodule init
+git submodule update
+
+
 ### Add crontab entry ###
 if [[ $(crontab -l | grep -q "get_sunrise_sunset" ; echo $?) -eq 1  ]]; then
     echo "Crontab Entry: Adding"
@@ -49,6 +55,9 @@ else
     echo "Vimrc Code: Already Added"
 fi
 
+## Update time for today
+echo "Updating times for today"
+./get_sunrise_sunset.sh
 
 ### Installation ended ###
 echo "Installation Finished"
