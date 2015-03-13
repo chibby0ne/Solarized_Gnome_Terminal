@@ -29,9 +29,9 @@ git submodule update
 if [[ $(crontab -l | grep -q "get_sunrise_sunset" ; echo $?) -eq 1  ]]; then
     echo "Crontab Entry: Adding"
     if [[ $# -eq 0 ]]; then
-        (crontab -l; echo "@reboot cd $dir && ./get_sunrise_sunset.sh")  | crontab -
+        (crontab -l; echo "*/5 * * * * cd $dir && ./get_sunrise_sunset.sh")  | crontab -
     elif [[ $# -eq 2 ]]; then
-        (crontab -l; echo "@reboot cd $dir &&  ./get_sunrise_sunset.sh $country $city")  | crontab -
+        (crontab -l; echo "*/5 * * * * cd $dir &&  ./get_sunrise_sunset.sh $country $city")  | crontab -
     fi
 else
     echo "Crontab Entry: Already Added"
