@@ -33,12 +33,12 @@ if [[ rc -eq 0 ]]; then
     rm $temp
 
     #update bashrc with today's values
-    sed -i "s/sunrise=.*/sunrise=10#${times[1]/:/}/g" ~/.bashrc
-    sed -i "s/sunset=.*/sunset=10#${times[2]/:/}/g" ~/.bashrc
+    sed -i "s/sunrise=.*/sunrise=10#${times[1]/:/}/g" ~/dotfiles/bashrc
+    sed -i "s/sunset=.*/sunset=10#${times[2]/:/}/g" ~/dotfiles/bashrc
 
     #update vimrc with today's values
-    sed -i "s/let sunrise=.*/let sunrise=\"${times[1]}\"/g" ~/.vimrc
-    sed -i "s/let sunset=.*/let sunset=\"${times[2]}\"/g" ~/.vimrc
+    sed -i "s/let sunrise=.*/let sunrise=\"${times[1]}\"/g" ~/dotfiles/vimrc
+    sed -i "s/let sunset=.*/let sunset=\"${times[2]}\"/g" ~/dotfiles/vimrc
 
 else
     echo "Error: exit code $rc"
