@@ -16,10 +16,10 @@ website="http://www.timeanddate.com/astronomy/$country/$city"
 temp=$(mktemp)
 
 # get website
-rc=$(wget $website -O $temp &> /dev/null) 
+rc=$(wget $website -O $temp &> /dev/null ; echo $?) 
 
 # store values for sunrise/sunset
-if [[ rc -eq 0 ]]; then
+if [[ $rc -eq 0 ]]; then
 
     # use an array to store times
     declare -a times
